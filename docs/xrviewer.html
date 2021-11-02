@@ -44,10 +44,10 @@
             new THREE.MeshLambertMaterial({color:'red'})
         );
         cube.position.set(0, 1.5, -10);
-        scene.add(cube);
+        //scene.add(cube);
         
         const loader = new STLLoader();
-				loader.load( '././stl/039-thalamus.stl', function ( geometry ) {
+				loader.load( './stl/039-thalamus.stl', function ( geometry ) {
 
 					const material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 					const mesh = new THREE.Mesh( geometry, material );
@@ -58,7 +58,7 @@
 
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
-
+					console.log("XXX");
 					scene.add( mesh );
 
 				} );
