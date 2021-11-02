@@ -47,7 +47,7 @@
         //scene.add(cube);
         
         const loader = new STLLoader();
-				loader.load( './stl/039-thalamus.stl', function ( geometry ) {
+				loader.load( 'https://github.com/darwinjob/xrviewer/blob/master/stl/039-thalamus.stl', function ( geometry ) {
 
 					const material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 					const mesh = new THREE.Mesh( geometry, material );
