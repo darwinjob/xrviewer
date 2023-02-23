@@ -21,7 +21,7 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "../build/three.module.js",
+					"three": "https://cdn.skypack.dev/three",
 					"three/addons/": "./jsm/"
 				}
 			}
@@ -31,12 +31,22 @@
 	
 	
     <script type="module">
+	    
+	    import * as THREE from 'three';
+
+			import Stats from 'three/addons/libs/stats.module.js';
+
+			import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+
+	    
+	    
         // Import three
-        import * as THREE from 'https://cdn.skypack.dev/three';
-        import Stats from 'https://cdn.skypack.dev/three/examples/jsm/libs/stats.module.js';
-        import { STLLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/STLLoader.js';
+        //import * as THREE from 'https://cdn.skypack.dev/three';
+        //import Stats from 'https://cdn.skypack.dev/three/examples/jsm/libs/stats.module.js';
+        //import { STLLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/STLLoader.js';
         // Import the default VRButton
-        import { VRButton } from 'https://cdn.skypack.dev/three/examples/jsm/webxr/VRButton.js';
+        //import { VRButton } from 'https://cdn.skypack.dev/three/examples/jsm/webxr/VRButton.js';
+	    import { VRButton } from 'three/addons/webxr/VRButton.js';
 
         // Make a new scene
         let scene = new THREE.Scene();
