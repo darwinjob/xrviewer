@@ -51,7 +51,7 @@
 
         // Make a camera. note that far is set to 100, which is better for realworld sized environments
         let camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 1.6, -50);
+        camera.position.set(0, 0, 100);
         scene.add(camera);
 
         // Add some lights
@@ -76,7 +76,7 @@
 					const material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 					mesh = new THREE.Mesh( geometry, material );
 
-					mesh.position.set( 0, 1.5, -10 );
+					mesh.position.set( 0, 0, 0 );
 					//mesh.rotation.set( 0, - Math.PI / 2, 0 );
 					mesh.scale.set( 1, 1, 1 );
 
