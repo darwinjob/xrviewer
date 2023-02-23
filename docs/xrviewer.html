@@ -61,18 +61,20 @@
         scene.add(new THREE.AmbientLight(0xffffff,0.5))
 
         // Make a red cube
-        let cube = new THREE.Mesh(
-            new THREE.BoxBufferGeometry(1,1,1),
-            new THREE.MeshLambertMaterial({color:'red'})
-        );
-        cube.position.set(0, 0, 0);
+        //let cube = new THREE.Mesh(
+          //  new THREE.BoxBufferGeometry(1,1,1),
+            //new THREE.MeshLambertMaterial({color:'red'})
+        //);
+        //cube.position.set(0, 0, 0);
         //scene.add(cube);
+	    
+	    var mesh;
         
         const loader = new STLLoader();
 				loader.load( '039-thalamus.stl', function ( geometry ) {
 
 					const material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
-					const mesh = new THREE.Mesh( geometry, material );
+					mesh = new THREE.Mesh( geometry, material );
 
 					mesh.position.set( 0, 1.5, -10 );
 					//mesh.rotation.set( 0, - Math.PI / 2, 0 );
@@ -116,7 +118,7 @@
 
         function render(time) {
             // Rotate the cube
-            cube.rotation.y = time / 1000;
+            mesh.rotation.y = time / 1000;
             // Draw everything
             renderer.render(scene, camera);
         }
