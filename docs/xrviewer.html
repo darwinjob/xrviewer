@@ -51,7 +51,7 @@
 
         // Make a camera. note that far is set to 100, which is better for realworld sized environments
         let camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
-        camera.position.set(0, 1.6, 50);
+        camera.position.set(0, 1.6, -10);
         scene.add(camera);
 
         // Add some lights
@@ -65,8 +65,8 @@
             new THREE.BoxBufferGeometry(1,1,1),
             new THREE.MeshLambertMaterial({color:'red'})
         );
-        cube.position.set(0, 1.5, -10);
-        //scene.add(cube);
+        cube.position.set(0, 0, 0);
+        scene.add(cube);
         
         const loader = new STLLoader();
 				loader.load( '039-thalamus.stl', function ( geometry ) {
