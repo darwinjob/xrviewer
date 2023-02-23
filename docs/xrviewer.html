@@ -92,6 +92,7 @@
         let renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
+	    renderer.xr.getCamera().lookAt(0,0,0);
         // Turn on VR support
         //renderer.vr.enabled = true;
         // Set animation loop
